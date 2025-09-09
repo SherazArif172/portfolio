@@ -14,13 +14,29 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Sheraz Arif | Full-Stack Developer (React.js, Next.js, Node.js, Laravel)",
-  description: "I’m Sheraz Arif, a Full-Stack Developer with 10+ years of PHP/Laravel expertise and 2+ years of experience in React.js, Next.js, and Node.js. I specialize in building fast, scalable, and SEO-optimized web applications for startups, agencies, and businesses.",
+  description:
+    "I’m Sheraz Arif, a Full-Stack Developer with 10+ years of PHP/Laravel expertise and 2+ years of experience in React.js, Next.js, and Node.js. I specialize in building fast, scalable, and SEO-optimized web applications for startups, agencies, and businesses.",
   icons: {
     icon: "/images/navimage.png",
     shortcut: "/images/navimage.png",
     apple: "/images/navimage.png",
   },
+  openGraph: {
+    title: "Sheraz Arif | Full-Stack Developer (React.js, Next.js, Node.js, Laravel)",
+    description:
+      "I’m Sheraz Arif, a Full-Stack Developer with 10+ years of PHP/Laravel expertise and 2+ years of experience in React.js, Next.js, and Node.js. I specialize in building fast, scalable, and SEO-optimized web applications for startups, agencies, and businesses.",
+    url: "https://sheraz-kappa.vercel.app",
+    siteName: "Sheraz Arif Portfolio",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Sheraz Arif | Full-Stack Developer (React.js, Next.js, Node.js, Laravel)",
+    description:
+      "I’m Sheraz Arif, a Full-Stack Developer with 10+ years of PHP/Laravel expertise and 2+ years of experience in React.js, Next.js, and Node.js. I specialize in building fast, scalable, and SEO-optimized web applications for startups, agencies, and businesses.",
+  },
 };
+
 
 export default function RootLayout({
   children,

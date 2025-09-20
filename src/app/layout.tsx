@@ -13,27 +13,56 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sheraz Arif | Full-Stack Developer (React.js, Next.js, Node.js, Laravel)",
+  title: "Sheraz Arif | Full-Stack Developer & Digital Innovator",
   description:
-    "I’m Sheraz Arif, a Full-Stack Developer with 10+ years of PHP/Laravel expertise and 2+ years of experience in React.js, Next.js, and Node.js. I specialize in building fast, scalable, and SEO-optimized web applications for startups, agencies, and businesses.",
+    "🚀 Transform your ideas into powerful web applications with a Full-Stack Developer who delivers excellence. Specialized in React.js, Next.js, Node.js & Laravel. Let's build something amazing together!",
+  keywords: "Full Stack Developer, React.js, Next.js, Node.js, Laravel, Web Development, Frontend, Backend, JavaScript, TypeScript, Portfolio",
+  authors: [{ name: "Sheraz Arif" }],
+  creator: "Sheraz Arif",
+  publisher: "Sheraz Arif",
   icons: {
     icon: "/images/navimage.png",
     shortcut: "/images/navimage.png",
     apple: "/images/navimage.png",
   },
   openGraph: {
-    title: "Sheraz Arif | Full-Stack Developer (React.js, Next.js, Node.js, Laravel)",
+    title: "Sheraz Arif | Full-Stack Developer & Digital Innovator",
     description:
-      "I’m Sheraz Arif, a Full-Stack Developer with 10+ years of PHP/Laravel expertise and 2+ years of experience in React.js, Next.js, and Node.js. I specialize in building fast, scalable, and SEO-optimized web applications for startups, agencies, and businesses.",
+      "🚀 Transform your ideas into powerful web applications with a Full-Stack Developer who delivers excellence. Specialized in React.js, Next.js, Node.js & Laravel. Let's build something amazing together!",
     url: "https://sheraz-kappa.vercel.app",
     siteName: "Sheraz Arif Portfolio",
     type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "/images/navimage.png",
+        width: 1200,
+        height: 630,
+        alt: "Sheraz Arif - Full-Stack Developer Portfolio",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
-    title: "Sheraz Arif | Full-Stack Developer (React.js, Next.js, Node.js, Laravel)",
+    card: "summary_large_image",
+    title: "Sheraz Arif | Full-Stack Developer & Digital Innovator",
     description:
-      "I’m Sheraz Arif, a Full-Stack Developer with 10+ years of PHP/Laravel expertise and 2+ years of experience in React.js, Next.js, and Node.js. I specialize in building fast, scalable, and SEO-optimized web applications for startups, agencies, and businesses.",
+      "🚀 Transform your ideas into powerful web applications with a Full-Stack Developer who delivers excellence. Specialized in React.js, Next.js, Node.js & Laravel.",
+    images: ["/images/navimage.png"],
+    creator: "@sherazarif",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  verification: {
+    google: "your-google-verification-code",
   },
 };
 

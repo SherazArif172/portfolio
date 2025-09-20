@@ -8,8 +8,6 @@ import {
   Coffee,
   Zap,
   Github,
-  Linkedin,
-  Mail,
 } from "lucide-react";
 import Link from "next/link";
 import CountUp from "./CountUp";
@@ -287,30 +285,6 @@ export function AboutSection() {
                         >
                           <Github className="w-4 h-4 mr-2" />
                           GitHub
-                        </Button>
-                      </Link>
-                      <Link
-                        className="cursor-pointer"
-                        href={"https://www.linkedin.com/in/sherazarifofficial/"}
-                      >
-                        <Button
-                          size="sm"
-                          className="bg-blue-600 hover:bg-blue-700 text-white font-mono"
-                        >
-                          <Linkedin className="w-4 h-4 mr-2" />
-                          LinkedIn
-                        </Button>
-                      </Link>
-                      <Link
-                        href={"mailto:sherazarifofficial@gmail.com"}
-                        className="cursor-pointer"
-                      >
-                        <Button
-                          size="sm"
-                          className="bg-red-600 hover:bg-red-700 text-white font-mono"
-                        >
-                          <Mail className="w-4 h-4 mr-2" />
-                          Email
                         </Button>
                       </Link>
                     </div>

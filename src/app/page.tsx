@@ -7,7 +7,7 @@ import { HeroSection } from "./_components/Hero";
 import { AboutSection } from "./_components/About";
 import { ProjectsSection } from "./_components/Projects";
 import { SkillsSection } from "./_components/Skills";
-import { ContactSection } from "./_components/Contact";
+import { ConnectSection } from "./_components/Contact";
 import { TestimonialsSection } from "./_components/Testemonial";
 import { Footer } from "./_components/Footer";
 
@@ -27,7 +27,7 @@ export default function Home() {
     <AboutSection/>
     <ProjectsSection/>
     <SkillsSection/>
-    <ContactSection/>
+    <ConnectSection/>
     {/* <TestimonialsSection/> */}
     <Footer/>
    </>

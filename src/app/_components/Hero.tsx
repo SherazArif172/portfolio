@@ -2,8 +2,7 @@
 
 import * as React from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Download, Eye, Sparkles } from "lucide-react";
-import Link from "next/link";
+import { ArrowDown, Eye, Sparkles } from "lucide-react";
 import CountUp from "./CountUp";
 import { motion } from "framer-motion";
 
@@ -116,9 +115,9 @@ export function HeroSection() {
           Expert in <span className="font-bold">React</span>, <span className="font-bold">Next.js</span>, and modern frameworks to transform your vision into fast, fluid, and responsive digital products.
         </motion.p>
 
-        {/* CTA Buttons */}
+        {/* CTA Button */}
         <motion.div
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
+          className="flex justify-center items-center mb-16"
           initial="hidden"
           animate="visible"
           variants={{
@@ -142,21 +141,6 @@ export function HeroSection() {
             >
               <Eye className="w-5 h-5 mr-2" />
               View My Work
-            </Button>
-          </motion.div>
-          <motion.div
-            variants={{ hidden: { opacity: 0, y: 20, scale: 0.96 }, visible: { opacity: 1, y: 0, scale: 1 } }}
-            transition={{ type: "spring", stiffness: 120, damping: 16 }}
-          >
-            <Button
-              variant="outline"
-              size="lg"
-              className="cursor-pointer border-white/20 text-white hover:bg-white hover:text-black px-8 py-6 text-lg font-semibold rounded-full backdrop-blur-sm transition-all duration-300 transform hover:scale-105 bg-transparent"
-            >
-              <Download className="w-5 h-5 mr-2" />
-              <Link href="/Sheraz Arif.pdf" download>
-                Download CV
-              </Link>
             </Button>
           </motion.div>
         </motion.div>

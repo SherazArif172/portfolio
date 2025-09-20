@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { Menu, Github, Linkedin, Mail } from "lucide-react"
+import { Menu, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { motion } from "framer-motion";
@@ -12,13 +12,11 @@ const navItems = [
   { name: "About", href: "#about" },
   { name: "Projects", href: "#projects" },
   { name: "Skills", href: "#skills" },
-  { name: "Contact", href: "#contact" },
+  { name: "Connect", href: "#connect" },
 ]
 
 const socialLinks = [
   { name: "GitHub", href: "https://github.com/SherazArif172/", icon: Github },
-  { name: "LinkedIn", href: "https://www.linkedin.com/in/sherazarifofficial/", icon: Linkedin },
-  { name: "Email", href: "mailto:sherazarifofficial@gmail.com", icon: Mail },
 ]
 
 export function PortfolioNavbar() {

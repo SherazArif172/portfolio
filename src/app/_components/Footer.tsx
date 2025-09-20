@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import { Button } from "@/components/ui/button"
-import { Github, Linkedin, Twitter, Mail, Heart, ArrowUp, Code, Coffee, MapPin, Phone } from "lucide-react"
+import { Github, Heart, ArrowUp, Code, Coffee } from "lucide-react"
 import Link from "next/link"
 import { motion } from "framer-motion";
 
@@ -71,21 +71,6 @@ export function Footer() {
               </p>
             </div>
 
-            {/* Contact Info */}
-            <motion.div className="space-y-3" variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }} transition={{ type: "spring", stiffness: 100, damping: 18 }}>
-              <div className="flex items-center gap-3 text-gray-400">
-                <Mail className="w-4 h-4 text-blue-400" />
-                <Link href={"mailto:sherazarifofficial@gmail.,com"} className="hover:underline focus:underline outline-none">sherazarifofficial@gmail.com</Link>
-              </div>
-              <div className="flex items-center gap-3 text-gray-400">
-                <Phone className="w-4 h-4 text-green-400" />
-                <span>+923095533003</span>
-              </div>
-              <div className="flex items-center gap-3 text-gray-400">
-                <MapPin className="w-4 h-4 text-purple-400" />
-                <span>Lahore, Pkistan</span>
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* Quick Links */}
@@ -97,7 +82,7 @@ export function Footer() {
                 { name: "About", href: "#about" },
                 { name: "Projects", href: "#projects" },
                 { name: "Skills", href: "#skills" },
-                { name: "Contact", href: "#contact" },
+                { name: "Connect", href: "#connect" },
               ].map((link) => (
                 <a
                   key={link.name}
@@ -129,24 +114,15 @@ export function Footer() {
             <motion.div variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }} transition={{ type: "spring", stiffness: 100, damping: 18 }}>
               <h4 className="text-lg font-semibold text-white mb-4">Let's Connect</h4>
               <motion.div className="flex gap-4" variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }} transition={{ type: "spring", stiffness: 100, damping: 18 }}>
-                {[
-                  { icon: Github, href:"https://github.com/SherazArif172/", label: "GitHub", color: "hover:bg-gray-600" },
-                  { icon: Linkedin, href:"https://www.linkedin.com/in/sherazarifofficial/", label: "LinkedIn", color: "hover:bg-blue-600" },
-                  { icon: Mail, href:"mailto:sherazarifofficial@gmail.com", label: "Email", color: "hover:bg-red-500" },
-                ].map((social) => {
-                  const Icon = social.icon
-                  return (
-                    <Link  key={social.label} href={social.href}>
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className={`bg-white/5 border-white/20 text-white transition-all duration-300 ${social.color} hover:text-white hover:scale-110`}
-                    >
-                      <Icon className="w-5 h-5" />
-                    </Button>
-                    </Link>
-                  )
-                })}
+                <Link href="https://github.com/SherazArif172/">
+                  <Button
+                    variant="outline"
+                    size="icon"
+                    className="bg-white/5 border-white/20 text-white transition-all duration-300 hover:bg-gray-600 hover:text-white hover:scale-110"
+                  >
+                    <Github className="w-5 h-5" />
+                  </Button>
+                </Link>
               </motion.div>
             </motion.div>
 

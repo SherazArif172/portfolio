@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Menu, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { ThemeToggle } from "@/components/theme-toggle"
 import { motion } from "framer-motion";
 
 const navItems = [
@@ -56,7 +57,7 @@ export function PortfolioNavbar() {
       animate={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
       transition={{ type: "spring", stiffness: 80, damping: 14, mass: 0.7 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-black/90 backdrop-blur-md border-b border-white/10" : "bg-transparent"
+        isScrolled ? "bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-200 dark:border-white/10" : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -64,7 +65,7 @@ export function PortfolioNavbar() {
           {/* Logo */}
           <Link
             href="#home"
-            className="text-white font-bold text-2xl tracking-tight hover:text-gray-300 transition-colors duration-200"
+            className="text-gray-900 dark:text-white font-bold text-2xl tracking-tight hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-200"
           >
             SHERAZ
           </Link>
@@ -95,8 +96,8 @@ export function PortfolioNavbar() {
               >
                 <Link
                   href={item.href}
-                  className={`text-white/80 hover:text-white transition-all duration-200 relative group ${
-                    activeSection === item.name.toLowerCase() ? "text-white" : ""
+                  className={`text-gray-600 dark:text-white/80 hover:text-gray-900 dark:hover:text-white transition-all duration-200 relative group ${
+                    activeSection === item.name.toLowerCase() ? "text-gray-900 dark:text-white" : ""
                   }`}
                   onClick={(e) => handleNavClick(e, item.href)}
                 >
@@ -107,7 +108,7 @@ export function PortfolioNavbar() {
             ))}
           </motion.div>
 
-          {/* Social Links - Desktop */}
+          {/* Social Links & Theme Toggle - Desktop */}
           <div className="hidden md:flex items-center space-x-4">
             {socialLinks.map((social) => {
               const Icon = social.icon
@@ -115,15 +116,16 @@ export function PortfolioNavbar() {
                 <Link
                   key={social.name}
                   href={social.href}
-                  className="text-white/60 hover:text-white transition-colors duration-200 p-2 hover:bg-white/10 rounded-full"
+                  className="text-gray-600 dark:text-white/60 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 p-2 hover:bg-gray-100 dark:hover:bg-white/10 rounded-full"
                 >
                   <Icon className="w-4 h-4" />
                 </Link>
               )
             })}
+            <ThemeToggle />
           </div>
 
-          {/* Social Links - Mobile Only */}
+          {/* Social Links & Theme Toggle - Mobile Only */}
           <div className="flex md:hidden items-center space-x-4 ml-auto">
             {socialLinks.map((social) => {
               const Icon = social.icon
@@ -131,12 +133,13 @@ export function PortfolioNavbar() {
                 <Link
                   key={social.name}
                   href={social.href}
-                  className="text-white/60 hover:text-white transition-colors duration-200 p-2 hover:bg-white/10 rounded-full"
+                  className="text-gray-600 dark:text-white/60 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 p-2 hover:bg-gray-100 dark:hover:bg-white/10 rounded-full"
                 >
                   <Icon className="w-5 h-5" />
                 </Link>
               )
             })}
+            <ThemeToggle />
           </div>
         </div>
       </div>

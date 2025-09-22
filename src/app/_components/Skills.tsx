@@ -143,13 +143,13 @@ export function SkillsSection() {
             Technical Expertise
           </div>
           <h2 className="text-4xl lg:text-5xl font-black mb-6">
-            <span className="text-white font-mono">{"<"}</span>
+            <span className="text-gray-900 dark:text-white font-mono">{"<"}</span>
             <span className="bg-gradient-to-r from-purple-400 via-blue-400 to-green-400 bg-clip-text text-transparent">
               Skills
             </span>
-            <span className="text-white font-mono">{" />"}</span>
+            <span className="text-gray-900 dark:text-white font-mono">{" />"}</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             A comprehensive overview of my technical skills, tools, and technologies I use to build exceptional digital
             experiences.
           </p>
@@ -180,14 +180,14 @@ export function SkillsSection() {
                 variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }}
                 transition={{ type: "spring", stiffness: 120, damping: 16 }}
               >
-                <Card className="bg-white/5 backdrop-blur-sm border border-white/10 hover:border-white/30 transition-all duration-300 group">
+                <Card className="bg-white/80 dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 hover:border-gray-300 dark:hover:border-white/30 transition-all duration-300 group shadow-lg dark:shadow-none">
                   <CardContent className="p-6 text-center">
                     <Icon className="w-8 h-8 text-purple-400 mx-auto mb-3 group-hover:scale-110 transition-transform" />
-                    <div className="text-3xl font-bold text-white mb-1 flex items-center justify-center">
+                    <div className="text-3xl font-bold text-gray-900 dark:text-white mb-1 flex items-center justify-center">
                       <CountUp to={parseInt(stat.value)} duration={1.2} startWhen={statsVisible} />
                       {stat.value.match(/\+|%/) && <span className="ml-1">{stat.value.replace(/\d+/g, "")}</span>}
                     </div>
-                    <div className="text-sm text-gray-400">{stat.label}</div>
+                    <div className="text-sm text-gray-500 dark:text-gray-400">{stat.label}</div>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -223,13 +223,13 @@ export function SkillsSection() {
                   className={`group relative overflow-hidden transition-all duration-300 ${
                     activeCategory === category.id
                       ? `bg-gradient-to-r ${category.color} text-white border-0 shadow-lg`
-                      : "bg-white/5 border-white/20 text-gray-300 hover:bg-white/10 hover:text-white"
+                      : "bg-white/80 dark:bg-white/5 border-gray-200 dark:border-white/20 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10 hover:text-gray-900 dark:hover:text-white"
                   }`}
                   onClick={() => setActiveCategory(category.id)}
                 >
                   <Icon className="w-4 h-4 mr-2" />
                   {category.name}
-                  <span className="ml-2 text-xs bg-white/20 px-2 py-1 rounded-full">
+                  <span className="ml-2 text-xs bg-gray-200 dark:bg-white/20 px-2 py-1 rounded-full text-gray-700 dark:text-white">
                     {skillCategories.find((cat) => cat.id === category.id)?.skills.length}
                   </span>
                 </Button>
@@ -261,7 +261,7 @@ export function SkillsSection() {
               transition={{ type: "spring", stiffness: 120, damping: 16 }}
             >
               <Card
-                className="group relative bg-white/5 backdrop-blur-sm border border-white/10 overflow-hidden hover:border-white/30 transition-all duration-300 transform hover:scale-100 sm:hover:scale-105"
+                className="group relative bg-white/80 dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 overflow-hidden hover:border-gray-300 dark:hover:border-white/30 transition-all duration-300 transform hover:scale-100 sm:hover:scale-105 shadow-lg dark:shadow-none"
                 onMouseEnter={() => {
                   setHoveredSkill(skill.name)
                   setShowCode(skill.code)
@@ -274,18 +274,18 @@ export function SkillsSection() {
                 <CardContent className="p-6">
                   {/* Skill Header */}
                   <div className="flex items-center justify-between mb-4">
-                    <h4 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
+                    <h4 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-blue-400 transition-colors">
                       {skill.name}
                     </h4>
-                    <span className="text-sm text-gray-400 bg-white/10 px-2 py-1 rounded-full">{skill.experience}</span>
+                    <span className="text-sm text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-white/10 px-2 py-1 rounded-full">{skill.experience}</span>
                   </div>
 
                   {/* Skill Level */}
 
                   {/* Code Preview */}
-                  <div className="bg-black/30 rounded-lg p-3 font-mono text-xs">
-                    <div className="text-gray-500 mb-1">// Example usage</div>
-                    <div className="text-green-400">{skill.code}</div>
+                  <div className="bg-gray-100 dark:bg-black/30 rounded-lg p-3 font-mono text-xs">
+                    <div className="text-gray-500 dark:text-gray-500 mb-1">// Example usage</div>
+                    <div className="text-green-600 dark:text-green-400">{skill.code}</div>
                   </div>
 
                   {/* Skill Level Badge */}
@@ -317,7 +317,7 @@ export function SkillsSection() {
 
         {/* Call to Action */}
         <div className="text-center mt-16">
-          <p className="text-gray-400 mb-6">Ready to work with these technologies?</p>
+          <p className="text-gray-500 dark:text-gray-400 mb-6">Ready to work with these technologies?</p>
           <Button
             size="lg"
             className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white border-0 px-8 py-6 text-lg font-semibold rounded-full group"

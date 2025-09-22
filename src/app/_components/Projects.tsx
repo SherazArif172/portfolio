@@ -180,13 +180,13 @@ export function ProjectsSection() {
             Featured Work
           </div>
           <h2 className="text-4xl lg:text-5xl font-black mb-6">
-            <span className="text-white font-mono">{"<"}</span>
+            <span className="text-gray-900 dark:text-white font-mono">{"<"}</span>
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               Projects
             </span>
-            <span className="text-white font-mono">{"/>"}</span>
+            <span className="text-gray-900 dark:text-white font-mono">{"/>"}</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
             A collection of projects that showcase my skills in full-stack
             development, AI integration, and modern web technologies.
           </p>
@@ -220,13 +220,13 @@ export function ProjectsSection() {
                   className={`group relative overflow-hidden ${
                     activeCategory === category.id
                       ? "bg-gradient-to-r from-blue-600 to-purple-600 text-white border-0"
-                      : "bg-white/5 border-white/20 text-gray-300 hover:bg-white/10 hover:text-white"
+                      : "bg-white/80 dark:bg-white/5 border-gray-200 dark:border-white/20 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-white/10 hover:text-gray-900 dark:hover:text-white"
                   }`}
                   onClick={() => setActiveCategory(category.id)}
                 >
                   <Icon className="w-4 h-4 mr-2" />
                   {category.name}
-                  <span className="ml-2 text-xs bg-white/20 px-2 py-1 rounded-full">{category.count}</span>
+                  <span className="ml-2 text-xs bg-gray-200 dark:bg-white/20 px-2 py-1 rounded-full text-gray-700 dark:text-white">{category.count}</span>
                 </Button>
               </motion.div>
             );
@@ -297,7 +297,7 @@ export function ProjectsSection() {
                     <div className="absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
                       <Button
                         size="sm"
-                        className="bg-white/20 backdrop-blur-sm text-white border-0 w-8 h-8 p-0"
+                        className="bg-gray-200/80 dark:bg-white/20 backdrop-blur-sm text-gray-900 dark:text-white border-0 w-8 h-8 p-0"
                         onClick={(e) => {
                           e.stopPropagation();
                           window.open(project.live, "_blank");
@@ -310,10 +310,10 @@ export function ProjectsSection() {
 
                   {/* Project Info */}
                   <div className="p-6">
-                    <h4 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                    <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-400 transition-colors">
                       {project.title}
                     </h4>
-                    <p className="text-gray-400 text-sm mb-4 line-clamp-2">
+                    <p className="text-gray-500 dark:text-gray-400 text-sm mb-4 line-clamp-2">
                       {project.description}
                     </p>
 
@@ -357,14 +357,14 @@ export function ProjectsSection() {
 
         {/* Project Details Dialog */}
         <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-          <DialogContent className="max-w-md w-full bg-[#101a14]/95 border border-emerald-900/60 shadow-lg shadow-emerald-900/30 p-0 md:px-2 md:py-4 backdrop-blur-md">
+          <DialogContent className="max-w-md w-full bg-white/95 dark:bg-[#101a14]/95 border border-gray-200 dark:border-emerald-900/60 shadow-lg shadow-gray-200/30 dark:shadow-emerald-900/30 p-0 md:px-2 md:py-4 backdrop-blur-md">
             {selectedProject && (
               <>
                 <DialogHeader>
-                  <DialogTitle className="text-xl md:text-2xl text-white mb-1 font-extrabold leading-tight">
+                  <DialogTitle className="text-xl md:text-2xl text-gray-900 dark:text-white mb-1 font-extrabold leading-tight">
                     {selectedProject.title}
                   </DialogTitle>
-                  <DialogDescription className="text-sm md:text-base text-gray-300 mb-3">
+                  <DialogDescription className="text-sm md:text-base text-gray-600 dark:text-gray-300 mb-3">
                     {selectedProject.description}
                   </DialogDescription>
                 </DialogHeader>
@@ -372,11 +372,11 @@ export function ProjectsSection() {
                   src={selectedProject.image || "/placeholder.svg"}
                   className="w-full object-contain rounded-lg mb-3 shadow-lg bg-black"
                 />
-                <div className="mb-3 text-gray-200 whitespace-pre-line text-sm md:text-base leading-relaxed">
+                <div className="mb-3 text-gray-600 dark:text-gray-200 whitespace-pre-line text-sm md:text-base leading-relaxed">
                   {selectedProject.details}
                 </div>
                 <div className="mb-2">
-                  <span className="font-semibold text-white text-sm block mb-2">
+                  <span className="font-semibold text-gray-900 dark:text-white text-sm block mb-2">
                     Tech Stack:
                   </span>
                   <div className="flex flex-wrap gap-2">

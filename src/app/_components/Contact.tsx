@@ -46,13 +46,13 @@ export function ConnectSection() {
           transition={{ type: "spring", stiffness: 100, damping: 18 }}
         >
           <h2 className="text-4xl lg:text-5xl font-black mb-6">
-            <span className="text-white font-mono">{"<"}</span>
+            <span className="text-gray-900 dark:text-white font-mono">{"<"}</span>
             <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
               Connect
             </span>
-            <span className="text-white font-mono">{"/>"}</span>
+            <span className="text-gray-900 dark:text-white font-mono">{"/>"}</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Check out my work on GitHub and let's connect there!
           </p>
         </motion.div>
@@ -60,16 +60,16 @@ export function ConnectSection() {
         {/* GitHub Section */}
         <motion.div
           className="flex flex-col items-center justify-center"
-          variants={{ hidden: { opacity: 0, y: 32 }, visible: { opacity: 1, y: 0 } }}
-          transition={{ type: "spring", stiffness: 120, damping: 18 }}
-        >
-          <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-12 max-w-md w-full">
+            variants={{ hidden: { opacity: 0, y: 32 }, visible: { opacity: 1, y: 0 } }}
+            transition={{ type: "spring", stiffness: 120, damping: 18 }}
+          >
+          <div className="bg-white/80 dark:bg-white/5 backdrop-blur-xl border border-gray-200 dark:border-white/10 rounded-2xl p-12 max-w-md w-full shadow-lg dark:shadow-none">
             <div className="flex flex-col items-center text-center">
               <div className="w-20 h-20 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full flex items-center justify-center mb-6">
                 <Github className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">GitHub</h3>
-              <p className="text-gray-300 mb-8 leading-relaxed">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">GitHub</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
                 Explore my repositories, projects, and contributions on GitHub.
               </p>
               <Link
@@ -81,7 +81,7 @@ export function ConnectSection() {
                 <Github className="w-5 h-5" />
                 Visit My GitHub
               </Link>
-            </div>
+                </div>
           </div>
         </motion.div>
       </motion.div>

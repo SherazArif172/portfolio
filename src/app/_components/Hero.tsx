@@ -59,13 +59,13 @@ export function HeroSection() {
       >
         {/* Floating Badge */}
         <motion.div
-          className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2 mb-8"
+          className="inline-flex items-center gap-2 bg-white/80 dark:bg-white/5 backdrop-blur-sm border border-gray-200 dark:border-white/10 rounded-full px-4 py-2 mb-8"
           initial={{ opacity: 0, y: -20, scale: 0.95 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ type: "spring", stiffness: 120, damping: 16 }}
         >
-          <Sparkles className="w-4 h-4 text-yellow-400" />
-          <span className="text-sm text-gray-300">
+          <Sparkles className="w-4 h-4 text-yellow-500 dark:text-yellow-400" />
+          <span className="text-sm text-gray-600 dark:text-gray-300">
             Available for new projects
           </span>
         </motion.div>
@@ -78,7 +78,7 @@ export function HeroSection() {
           transition={{ type: "spring", stiffness: 80, damping: 14 }}
         >
           <motion.span
-            className="block bg-gradient-to-r from-white via-gray-200 to-gray-400 bg-clip-text text-transparent animate-gradient"
+            className="block bg-gradient-to-r from-gray-900 via-gray-700 to-gray-500 dark:from-white dark:via-gray-200 dark:to-gray-400 bg-clip-text text-transparent animate-gradient"
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ type: "spring", stiffness: 100, damping: 18, delay: 0.2 }}
@@ -86,7 +86,7 @@ export function HeroSection() {
             INNOVATIVE
           </motion.span>
           <motion.span
-            className="block bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent animate-gradient "
+            className="block bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 dark:from-purple-400 dark:via-pink-400 dark:to-blue-400 bg-clip-text text-transparent animate-gradient "
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ type: "spring", stiffness: 100, damping: 18, delay: 0.35 }}
@@ -97,7 +97,7 @@ export function HeroSection() {
 
         {/* Subtitle */}
         <motion.p
-          className="text-xl md:text-2xl text-gray-300 mb-4 max-w-3xl mx-auto leading-relaxed"
+          className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-4 max-w-3xl mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", stiffness: 100, damping: 18, delay: 0.5 }}
@@ -107,7 +107,7 @@ export function HeroSection() {
 
         {/* Description */}
         <motion.p
-          className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto"
+          className="text-lg text-gray-500 dark:text-gray-400 mb-12 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", stiffness: 100, damping: 18, delay: 0.6 }}
@@ -173,7 +173,7 @@ export function HeroSection() {
               variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
               transition={{ type: "spring", stiffness: 120, damping: 16 }}
             >
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2 ">
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-2 ">
                 <CountUp
                   from={0}
                   to={parseInt(stat.digit.replace(/\D/g, ""))}
@@ -181,11 +181,11 @@ export function HeroSection() {
                   duration={1}
                   startWhen={statsVisible}
                 />
-                <span className="ml-1 text-white">
+                <span className="ml-1 text-gray-900 dark:text-white">
                   {stat.digit.replace(/[0-9]/g, "")}
                 </span>
               </div>
-              <div className="text-sm text-gray-400 uppercase tracking-wider">
+              <div className="text-sm text-gray-500 dark:text-gray-400 uppercase tracking-wider">
                 {stat.label}
               </div>
             </motion.div>

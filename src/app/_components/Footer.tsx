@@ -62,10 +62,10 @@ export function Footer() {
             <div className="mb-6">
               <h3 className="text-3xl font-black mb-4">
                 <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Portfolio
+                  SHERAZ
                 </span>
               </h3>
-              <p className="text-gray-300 leading-relaxed max-w-md">
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed max-w-md">
                 Full-stack developer passionate about creating exceptional digital experiences with modern technologies.
                 Let's build something amazing together.
               </p>
@@ -75,7 +75,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <motion.div variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }} transition={{ type: "spring", stiffness: 100, damping: 18 }}>
-            <h4 className="text-lg font-semibold text-white mb-6">Navigation</h4>
+            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-6">Navigation</h4>
             <motion.div className="space-y-3" variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }} transition={{ type: "spring", stiffness: 100, damping: 18 }}>
               {[
                 { name: "Home", href: "#home" },
@@ -87,7 +87,7 @@ export function Footer() {
                 <a
                   key={link.name}
                   href={link.href}
-                  className="block text-gray-400 hover:text-white transition-colors duration-200 hover:translate-x-1 transform"
+                  className="block text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 hover:translate-x-1 transform"
                 >
                   {link.name}
                 </a>
@@ -97,10 +97,10 @@ export function Footer() {
 
           {/* Services */}
           <motion.div variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }} transition={{ type: "spring", stiffness: 100, damping: 18 }}>
-            <h4 className="text-lg font-semibold text-white mb-6">Services</h4>
+            <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-6">Services</h4>
             <motion.div className="space-y-3" variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }} transition={{ type: "spring", stiffness: 100, damping: 18 }}>
               {["Web Development", "Mobile Apps", "UI/UX Design", "API Development", "Consulting"].map((service) => (
-                <div key={service} className="text-gray-400">
+                <div key={service} className="text-gray-500 dark:text-gray-400">
                   {service}
                 </div>
               ))}
@@ -109,16 +109,16 @@ export function Footer() {
         </motion.div>
 
         {/* Social Links Section */}
-        <motion.div className="border-t border-white/10 pt-8 mb-8" variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }} transition={{ type: "spring", stiffness: 100, damping: 18 }}>
+        <motion.div className="border-t border-gray-200 dark:border-white/10 pt-8 mb-8" variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }} transition={{ type: "spring", stiffness: 100, damping: 18 }}>
           <motion.div className="flex flex-col md:flex-row items-center justify-between gap-6" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }} variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.10, delayChildren: 0.2 } } }}>
             <motion.div variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }} transition={{ type: "spring", stiffness: 100, damping: 18 }}>
-              <h4 className="text-lg font-semibold text-white mb-4">Let's Connect</h4>
+              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Let's Connect</h4>
               <motion.div className="flex gap-4" variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }} transition={{ type: "spring", stiffness: 100, damping: 18 }}>
                 <Link href="https://github.com/SherazArif172/">
                   <Button
                     variant="outline"
                     size="icon"
-                    className="bg-white/5 border-white/20 text-white transition-all duration-300 hover:bg-gray-600 hover:text-white hover:scale-110"
+                    className="bg-white/80 dark:bg-white/5 border-gray-200 dark:border-white/20 text-gray-900 dark:text-white transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-600 hover:text-gray-900 dark:hover:text-white hover:scale-110"
                   >
                     <Github className="w-5 h-5" />
                   </Button>
@@ -132,17 +132,17 @@ export function Footer() {
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                 <span className="text-green-400 text-sm font-mono">Available for hire</span>
               </div>
-              <div className="text-gray-400 text-sm">Response time: {"< 24 hours"}</div>
+              <div className="text-gray-500 dark:text-gray-400 text-sm">Response time: {"< 24 hours"}</div>
             </motion.div>
           </motion.div>
         </motion.div>
 
         {/* Bottom Bar */}
-        <motion.div className="border-t border-white/10 pt-8" variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }} transition={{ type: "spring", stiffness: 100, damping: 18 }}>
+        <motion.div className="border-t border-gray-200 dark:border-white/10 pt-8" variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }} transition={{ type: "spring", stiffness: 100, damping: 18 }}>
           <motion.div className="flex flex-col md:flex-row items-center justify-between gap-4" variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }} transition={{ type: "spring", stiffness: 100, damping: 18 }}>
             {/* Copyright */}
-            <motion.div className="flex items-center gap-2 text-gray-400 text-sm" variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }} transition={{ type: "spring", stiffness: 100, damping: 18 }}>
-              <span>© {currentYear} Portfolio.</span>
+            <motion.div className="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-sm" variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }} transition={{ type: "spring", stiffness: 100, damping: 18 }}>
+              <span>© {currentYear} SHERAZ.</span>
               <span>Made with</span>
               <Heart className="w-4 h-4 text-red-400 fill-current animate-pulse" />
               <span>and</span>
@@ -151,7 +151,7 @@ export function Footer() {
             </motion.div>
 
             {/* Tech Stack */}
-            <motion.div className="flex items-center gap-2 text-gray-500 text-xs" variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }} transition={{ type: "spring", stiffness: 100, damping: 18 }}>
+            <motion.div className="flex items-center gap-2 text-gray-500 dark:text-gray-500 text-xs" variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0 } }} transition={{ type: "spring", stiffness: 100, damping: 18 }}>
               <Code className="w-4 h-4" />
               <span>Built with Next.js, TypeScript & Tailwind CSS</span>
             </motion.div>
